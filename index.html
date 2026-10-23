@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI Controls Showcase</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <h1>UI Controls Overview</h1>
+    </header>
+
+    <div id="radiobutton">
+        <h2>Radiobutton</h2>
+        <p>Призначений для вибору лише одного варіанта з невеликого переліку (зазвичай 2–4 опції). Усі доступні варіанти залишаються видимими користувачеві одночасно.</p>
+        
+        <div class="demo-box">
+            <p><strong>Select processing mode:</strong></p>
+            <div class="radio-group">
+                <label><input type="radio" name="mode" value="Option 1" checked> Option 1</label>
+                <label><input type="radio" name="mode" value="Option 2"> Option 2</label>
+                <label><input type="radio" name="mode" value="Option 3"> Option 3</label>
+            </div>
+            <div class="status-output" id="radio-status">Your request will show results for Option 1</div>
+        </div>
+    </div>
+
+    <div id="checkbox">
+        <h2>Checkbox</h2>
+        <p>Дозволяє вибирати незалежні параметри: від жодного до декількох одразу. Кожен чекбокс працює як автономний перемикач "увімкнено/вимкнено".</p>
+
+        <div class="demo-box">
+            <p><strong>Choose book categories to search for:</strong></p>
+            <div class="checkbox-group">
+                <label><input type="checkbox" value="Fiction" checked> Fiction</label>
+                <label><input type="checkbox" value="Science & Tech"> Science & Tech</label>
+                <label><input type="checkbox" value="History"> History</label>
+                <label><input type="checkbox" value="Biography"> Biography</label>
+            </div>
+        </div>
+    </div>
+
+    <div id="text-input">
+        <h2>Text input</h2>
+        <p>Слугує для введення довільних текстових даних або пошуку. Буває однорядковим (стандартний input) або багаторядковим (textarea).</p>
+
+        <div class="demo-box flex-row">
+            <div class="input-field">
+                <label for="user-search">Quick Search:</label>
+                <input type="text" id="user-search" placeholder="Type query here...">
+            </div>
+            <div class="input-field">
+                <label for="user-notes">Feedback / Notes:</label>
+                <textarea id="user-notes" rows="2" placeholder="Write additional feedback..."></textarea>
+            </div>
+        </div>
+    </div>
+
+    <div id="tabs">
+        <h2>Tabs</h2>
+        <p>Організовують зв'язаний контент за тематичними вкладками, дозволяючи перемикати режими перегляду в межах однієї області без перезавантаження сторінки.</p>
+
+        <div class="demo-box">
+            <div class="tab-header">
+                <div class="tab-btn active" data-tab="display">Display</div>
+                <div class="tab-btn" data-tab="datetime">Date & Time</div>
+                <div class="tab-btn" data-tab="apps">Apps</div>
+            </div>
+            <div class="tab-content" id="tab-content">
+                Display settings: Adjust screen brightness, resolution, and dark theme preferences.
+            </div>
+        </div>
+    </div>
+
+    <div id="button">
+        <h2>Button</h2>
+        <p>Викликає конкретну дію чи подію при натисканні (відправка форми, зміна стану UI, підтвердження або скасування операції).</p>
+
+        <div class="demo-box">
+            <p id="target-text">This text color will change depending on which button you press.</p>
+            <div class="btn-group">
+                <button type="button" id="btn-red">Make text red</button>
+                <button type="button" id="btn-reset">Reset to black</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="text-label">
+        <h2>Text label</h2>
+        <p>Інформує користувача про призначення елементів форми або відображає динамічний системний статус чи попередження.</p>
+
+        <div class="demo-box flex-row">
+            <div>
+                <span class="label-badge info">Label: Account ID</span>
+            </div>
+            <div>
+                <span class="label-badge warning">Warning: Unsaved changes</span>
+            </div>
+            <div>
+                <span class="label-badge success">Status: System Online</span>
+            </div>
+        </div>
+    </div>
+
+    <div id="link">
+        <h2>Link</h2>
+        <p>Забезпечує навігацію на зовнішні веб-ресурси, інші розділи документа чи відкриває завантаження файлів.</p>
+
+        <div class="demo-box flex-row">
+            <a href="https://kqjqxb.github.io/QC-Fund/" target="_blank" class="custom-link">QC Fundamentals Repository</a>
+            <a href="#radiobutton" class="custom-link">Scroll to top section</a>
+        </div>
+    </div>
+
+    <div id="tooltip">
+        <h2>Tooltip</h2>
+        <p>Відображає контекстну підказку під час наведення курсору миші, надаючи додаткову інформацію без захаращення інтерфейсу.</p>
+
+        <div class="demo-box flex-row">
+            <div class="tooltip-wrapper">
+                <span class="tooltip-trigger">Hover over me</span>
+                <span class="tooltip-box">This is a contextual tooltip prompt.</span>
+            </div>
+            <div class="tooltip-wrapper">
+                <span class="tooltip-trigger badge-help">?</span>
+                <span class="tooltip-box">Help: Contact support if issue persists.</span>
+            </div>
+        </div>
+    </div>
+
+    <div id="dropdown-list">
+        <h2>Dropdown list</h2>
+        <p>Використовується замість Radiobutton коли перелік опцій великий, економлячи простір екрану за рахунок компактного меню, що розгортається.</p>
+
+        <div class="demo-box">
+            <label for="country-select">Select your primary country/region:</label>
+            <select id="country-select">
+                <option value="ukraine">Ukraine</option>
+                <option value="poland">Poland</option>
+                <option value="germany">Germany</option>
+                <option value="estonia">Estonia</option>
+                <option value="canada">Canada</option>
+            </select>
+        </div>
+    </div>
+
+    <div id="data-grid">
+        <h2>Data grid</h2>
+        <p>Призначений для структурованого відображення табличних даних із підтримкою сортування, фільтрації та пошуку записів.</p>
+
+        <div class="demo-box">
+            <table class="grid-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Component</th>
+                        <th>Type</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>101</td>
+                        <td>Login Form</td>
+                        <td>UI Module</td>
+                        <td>Passed</td>
+                    </tr>
+                    <tr>
+                        <td>102</td>
+                        <td>Payment Gateway</td>
+                        <td>API Integration</td>
+                        <td>Pending</td>
+                    </tr>
+                    <tr>
+                        <td>103</td>
+                        <td>Data Export</td>
+                        <td>Grid Function</td>
+                        <td>In Progress</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // 1. Radiobutton status dynamic change
+            const radioButtons = document.querySelectorAll('input[name="mode"]');
+            const radioStatus = document.getElementById('radio-status');
+            radioButtons.forEach(radio => {
+                radio.addEventListener('change', (e) => {
+                    radioStatus.textContent = `Your request will show results for ${e.target.value}`;
+                });
+            });
+
+            // 4. Tabs switching
+            const tabBtns = document.querySelectorAll('.tab-btn');
+            const tabContent = document.getElementById('tab-content');
+            const tabData = {
+                display: 'Display settings: Adjust screen brightness, resolution, and dark theme preferences.',
+                datetime: 'Date & Time settings: Configure timezone, 24-hour format, and automatic NTP synchronization.',
+                apps: 'Apps settings: Manage installed application permissions, default handlers, and storage usage.'
+            };
+
+            tabBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    tabBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    const key = btn.getAttribute('data-tab');
+                    tabContent.textContent = tabData[key] || '';
+                });
+            });
+
+            // 5. Button color manipulation
+            const targetText = document.getElementById('target-text');
+            document.getElementById('btn-red').addEventListener('click', () => {
+                targetText.style.color = '#e74c3c';
+            });
+            document.getElementById('btn-reset').addEventListener('click', () => {
+                targetText.style.color = '#2d3a4b';
+            });
+        });
+    </script>
+</body>
+</html>
